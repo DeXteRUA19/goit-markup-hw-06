@@ -385,14 +385,17 @@
           </ul>
         </div>
       </div>
-      <form>
-        <label>
-          Подпишитесь на рассылку
-          <input type="text" />
-        </label>
 
-        <button type="submit">Подписаться</button>
-      </form>
+      <div class="contacts-form">
+        <form>
+          <label>
+            Подпишитесь на рассылку
+            <input type="text" />
+          </label>
+
+          <button type="submit">Подписаться</button>
+        </form>
+      </div>
     </footer>
     <!-- MODAL -->
     <div data-modal class="backdrop is-hidden">
@@ -402,6 +405,14 @@
             <use href="./images/sprite.svg#icon-closex"></use>
           </svg>
         </button>
+        <form action="#" class="modal-form">
+          <imput type="text" class="modal-form-imput"></imput>
+          <imput type="tel" class="modal-form-imput"></imput>
+          <imput type="" class="modal-form-imput"></imput>
+          <textarea name="" id="" cols="30" rows="10" class="modal-form-message"></textarea>
+          <imput type="text" class="modal-form-polisy"></imput>
+          <button class="modal-form-btn"></button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

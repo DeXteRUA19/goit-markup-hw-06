@@ -583,3 +583,9 @@ img {
   height: 18px;
 }
 /* ========== END COMPONENTS ========== */
+
+.contacts-form {
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
