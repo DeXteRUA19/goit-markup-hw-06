@@ -405,13 +405,26 @@
             <use href="./images/sprite.svg#icon-closex"></use>
           </svg>
         </button>
+        <h2>Оставьте свои данные, мы вам перезвоним</h2>
         <form action="#" class="modal-form">
-          <imput type="text" class="modal-form-imput"></imput>
-          <imput type="tel" class="modal-form-imput"></imput>
-          <imput type="" class="modal-form-imput"></imput>
-          <textarea name="" id="" cols="30" rows="10" class="modal-form-message"></textarea>
-          <imput type="text" class="modal-form-polisy"></imput>
-          <button class="modal-form-btn"></button>
+          <label class="modal-form-field">
+            Имя*
+            <input type="text" name="user-name" class="modal-form-input" required />
+            <svg class="modal-form-svg-icon">
+              <use>href="./images/sprite.svg#icon-name"</use>
+            </svg>
+          </label>
+          <label class="modal-form-field">
+            Телефон*
+            <input type="tel" name="user-phone" class="modal-form-input" required />
+          </label>
+          <label class="modal-form-field">
+            Почта*
+            <input type="mailto" name="user-mail" class="modal-form-input" required />
+          </label>
+          <textarea name="user-message" id="" cols="30" rows="10" class="modal-form-message"></textarea>
+          <input type="checkbox" name="user-polisy" value="accept-policy" class="modal-form-polisy" />
+          <button type="submit" class="modal-form-btn">Отправить</button>
         </form>
       </div>
     </div>

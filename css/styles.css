@@ -155,7 +155,8 @@ img {
   margin-bottom: 30px;
   color: #ffffff;
 }
-.modal-btn {
+.modal-btn,
+.modal-form-btn {
   min-width: 200px;
   height: 50px;
   background: var(--accent-color);
@@ -558,6 +559,7 @@ img {
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  padding: 40px;
 
   width: 528px;
   height: 580px;
@@ -589,3 +591,32 @@ img {
   justify-content: flex-end;
   box-sizing: border-box;
 }
+
+/* ========= MODAL FORM =============*/
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-btn {
+  align-self: flex-start;
+}
+
+.modal-form-input {
+  display: block;
+  height: 40px;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-form-message {
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+}
+/* ========= END MODAL FORM =============*/
