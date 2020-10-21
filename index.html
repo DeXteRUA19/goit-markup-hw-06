@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -50,7 +53,7 @@
       <!--ADVANTAGES-->
       <section class="andvantages">
         <div class="container">
-          <h2 class="hidden">Наше предложение</h2>
+          <h2 class="visually-hidden">Наше предложение</h2>
           <ul class="advantages-list">
             <li class="advantages-list-item list icon-aerial">
               <h3 class="advantages-list-title">Внимание к деталям</h3>
@@ -384,17 +387,12 @@
             </li>
           </ul>
         </div>
-      </div>
-
-      <div class="contacts-form">
-        <form>
-          <label>
-            Подпишитесь на рассылку
-            <input type="text" />
-          </label>
-
-          <button type="submit">Подписаться</button>
-        </form>
+        <div class="sign-to-news">
+          <form class="sign-form" action="#" method="get">
+            <label class="sign-label" for="sign-input">Подпишитесь на рассылку</label>
+            <input type="email" class="sign-input" name="email" placeholder="E-mail" id="sign-input">
+            <button class="sign-btn" type="submit">Подписаться</button></form>
+        </div>
       </div>
     </footer>
     <!-- MODAL -->
@@ -405,29 +403,40 @@
             <use href="./images/sprite.svg#icon-closex"></use>
           </svg>
         </button>
-        <h2>Оставьте свои данные, мы вам перезвоним</h2>
-        <form action="#" class="modal-form">
-          <label class="modal-form-field">
-            Имя*
-            <input type="text" name="user-name" class="modal-form-input" required />
-            <svg class="modal-form-svg-icon">
-              <use>href="./images/sprite.svg#icon-name"</use>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form action="#" method="get" class="modal-form">
+          <label class="modal-field">Имя
+            <span class="modal-field-wrapper">
+              <input type="text" class="modal-input" name="name"/>
+            <svg width ="12" height ="12" class="modal-form-svg">
+              <use href="./images/sprite.svg#modal-name"></use>
             </svg>
+            </span>
           </label>
-          <label class="modal-form-field">
-            Телефон*
-            <input type="tel" name="user-phone" class="modal-form-input" required />
+          <label class="modal-field">Телефон
+            <span class="modal-field-wrapper">
+              <input type="tel" class="modal-input" name="phone"/>
+            <svg width ="13" height ="13" class="modal-form-svg">
+              <use href="./images/sprite.svg#modal-phone"></use>
+            </svg>
+            </span>
           </label>
-          <label class="modal-form-field">
-            Почта*
-            <input type="mailto" name="user-mail" class="modal-form-input" required />
+          <label class="modal-field">Почта
+           <span class="modal-field-wrapper">
+            <input type="email" class="modal-input" name="e-mail"/>
+            <svg width ="15" height ="12" class="modal-form-svg">
+              <use href="./images/sprite.svg#modal-envelope"></use>
+            </svg>
+           </span>
           </label>
-          <textarea name="user-message" id="" cols="30" rows="10" class="modal-form-message"></textarea>
-          <input type="checkbox" name="user-polisy" value="accept-policy" class="modal-form-polisy" />
-          <button type="submit" class="modal-form-btn">Отправить</button>
+          <label class="modal-comment-field" for="modal-comment">Комментарий</label>
+          <textarea class="modal-comment" id="modal-comment" placeholder="Введите текст" name="modal-comment"></textarea>
+          <input class="modal-policy-input visually-hidden" type="checkbox" value="accepted-policy" id="modal-policy" name="accepted-policy">
+          <label class="modal-policy-field" for="modal-policy">Соглашаюсь с рассылкой и принимаю &#160<a href="" class="modal-policy">Условия договора</a></label>
+          <button type="submit" class="modal-btn-submit">Отправить</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
-</html>
+  </html>
